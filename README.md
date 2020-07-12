@@ -1,3 +1,7 @@
+# Repo Details
+This repo is all about start bulding website with ember.js
+
+
 # website
 
 This README outlines the details of collaborating on this Ember application.
