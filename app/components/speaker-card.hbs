@@ -1,0 +1,32 @@
+<div class="session-wrapper">
+	{{#each @speakersData as |speakerDetails| }}
+		<div class="session-info">
+			<h1 class="topic-name">{{speakerDetails.topic.name}}</h1>
+			<h2 class="speaker-name">{{speakerDetails.name}}
+				{{#if speakerDetails.links.linkedin}}
+					<span class="speaker-social-info linkedin-info">
+						<a target="_blank" rel="noopener noreferrer" href={{speakerDetails.links.linkedin}}>
+							<img class="social-media-logo" src="assets/images/linkedin512.png" alt="LinkedIn logo" />
+						</a>
+					</span>
+				{{/if}}
+				{{#if speakerDetails.links.twitter}}
+					<span class="speaker-social-info twitter-info">
+						<a target="_blank" rel="noopener noreferrer" href={{speakerDetails.links.twitter}}>
+							<img class="social-media-logo" src="assets/images/twitter100.png" alt="Twitter logo" />
+						</a>
+					</span>
+				{{/if}}
+			</h2>
+			<h3 class="speaker-info">{{speakerDetails.info}}</h3>
+			<ul>	
+				{{#each speakerDetails.topic.details as  |detail|}}
+					<li>
+						{{detail}}
+					</li>
+				{{/each}}
+			</ul>
+		</div>
+	{{/each}}
+</div>
+

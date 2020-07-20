@@ -1,1 +1,16 @@
-<Events @Title="Web Mini-Conference"/>
+<section class="event-details">
+	<h2 class="event-upcoming">Upcoming Event</h2>
+	<h1 class="event-title">{{@model.event.title}}</h1>
+	<h3 class="event-date-time">{{@model.event.date}}</h3>
+</section>
+<RegisterSeat
+		@initial="Register & grab your seat!"
+		@link={{@model.meeting.link}} />
+
+<h2 class="speakers-title">Sessions</h2>
+
+<SpeakerCard @speakersData={{@model.speakersData}} />
+
+<RegisterSeat
+	@initial="Register & grab your seat!"
+	@link={{@model.meeting.link}} />
